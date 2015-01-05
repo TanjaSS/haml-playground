@@ -5,5 +5,7 @@
   .post
     %h1{:style => "color: #{post.title_color}", :class => ["h1", post.published && "published"], :id => "h1"}= post.title
     %h2= post.subtitle
+    .color
+      Color of the post title is #{post.title_color}
     .content
       = post.content
