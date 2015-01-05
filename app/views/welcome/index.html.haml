@@ -1,2 +1,9 @@
 %h1 Hello from Haml!
 %p This is test Haml content.
+
+- @posts.each do |post|
+  .post
+    %h1= post.title
+    %h2= post.subtitle
+    .content
+      = post.content
