@@ -1,9 +1,9 @@
-%h1 Hello from Haml!
+%h1{h1_attributes} Hello from Haml!
 %p This is test Haml content.
 
 - @posts.each do |post|
   .post
-    %h1{:style => "color: #{post.title_color}", :class => "h1", :id => "h1"}= post.title
+    %h1{:style => "color: #{post.title_color}", :class => ["h1", post.published && "published"], :id => "h1"}= post.title
     %h2= post.subtitle
     .content
       = post.content
