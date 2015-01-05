@@ -3,7 +3,7 @@
 
 - @posts.each do |post|
   .post
-    %h1= post.title
+    %h1{:style => "color: #{post.title_color}", :class => "h1", :id => "h1"}= post.title
     %h2= post.subtitle
     .content
       = post.content
